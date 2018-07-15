@@ -12,9 +12,9 @@ calculate special region hotspots density
 > 输入文件为特定区域的文件，相比较其他区域有其自身的特点
 > 对应的还有全局区域的文件，一般来说，全局区域分为特定区域和非特定区域
 
-- 函数
+- 函数:
 
-	- special_region()
+- special_region()
 
 > 	- 通过特定区域的文件获取字典格式的特定区域
 > 	- 输入文件格式：
@@ -28,7 +28,7 @@ calculate special region hotspots density
 > 	- chr1:[(20000,50000),(60000,90000),...]
 > 	- chr2:[...]
 
-	- global_region()
+- global_region()
  
 > 	- 通过全局区域的文件获取字典格式的全局区域
 > 	- 输入文件格式：
@@ -43,7 +43,7 @@ calculate special region hotspots density
 > 	- chr2:[(0,243199373)]
 > 	- ...
 
-	- nonspecial_region()
+- nonspecial_region()
 
 > 	- 通过上面连个函数计算得到的特定区域字典和全局区域字典计算
 > 	- 非特定区域的字典
@@ -58,9 +58,9 @@ calculate special region hotspots density
 ## get_block.py ##
 > 随机获取某区域上的部分区域用以后续计算
 
-- 函数
+- 函数:
 
-	- random_block_D(random_times, area, total_length=0)
+- random_block_D(random_times, area, total_length=0)
 
 > 	- 在特定区域上，随机获取全部区域（暂时不能获取部分的特定区域，特定区域只能整体获取
 > 	- 在非特定区域和全局区域上，随机获取部分区域，每一次获取的部分区域长度由total_length和random_times共同决定，总长度和特定区域随机获取的总长度一样。
@@ -68,7 +68,7 @@ calculate special region hotspots density
 > 	- 选取的长度由length、random_times共同确定
 > 	- 随机区域由area给定
 
-	- total_random_length()
+- total_random_length()
 
 > 	- 获取随机选取的特定区域的总长，在非特定区域和全局区域选取相同的长度，以确保三者之间具有可比性，后续计算也方便
 
@@ -76,13 +76,13 @@ calculate special region hotspots density
 ## get_hotspots.py ##
 > 从随机区域计算热点出现次数
 
-- 函数
+- 函数:
 
-	- hotspots_D(hotspots_file)	
+- hotspots_D(hotspots_file)	
 
 > 	- 从热点文件获取字典格式的热点数据
 	
-	- get_counts(random_D, hotspots_D)
+- get_counts(random_D, hotspots_D)
 
 > 	- 从随机区域获取热点出现次数
 
@@ -90,9 +90,9 @@ calculate special region hotspots density
 ## avg_counts.py ##
 > 计算特定区域、全局区域、非特定区域的热点平均出现次数
 
-- 函数
+- 函数:
 
-	- Avg_Counts(s_region_file,global_file,hotspots_file,stat_length,random_times=1000)
+- Avg_Counts(s_region_file,global_file,hotspots_file,stat_length,random_times=1000)
 
 > 	- s_region_filename:特定区域的文件
 > 	- global_filename:全局区域的文件
